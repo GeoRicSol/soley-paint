@@ -64,40 +64,43 @@ input[type=text] {
     padding: 12px 20px 12px 40px;
 }
 
+body {
+	  background: rgb(255, 255, 255)  no-repeat fixed center;
+	  margin: 0;
+	  font-family: Arial, Helvetica, sans-serif;
+	}
+
+	.banner {
+	  background: linear-gradient(180deg,#edf105,#f19305f3);
+	  color: #050505;
+	  padding: 14px 12px;
+	  text-align: center;
+	  font-size: 1.2rem;
+	  font-weight: 700;
+	  letter-spacing: 0.5px;
+	  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+	}
+
+	.banner small {
+	  display: block;
+	  font-weight: 400;
+	  font-size: 0.6rem;
+	  opacity: 0.85;
+	}
+
+  	.gap {
+		margin: 10px;
+	}
+
 </style>
-
-<!-- ######### Style Vault ###############
-
-
-#cssproperties .ws-table-all td:first-child {
-  width: 30%!important;
-}
-
-#searchicon:after {
-  content: "\f002"; 
-  font-family: FontAwesome;
-  position: absolute;
-  font-size: 24px;
-  color: #cccccc;
-  top: 6px;
-  left: 12px;
-}
-
-
-label {
-  font-weight:normal;
-} 
-
-########################################
--->
 
 </head>
 
 <body>
-
-<!-- https://www.w3schools.com/cssref/css4_pr_accent-color.php -->
+  <div class="gap">
+<div class="banner">Soley's Design Notes</div>
 <!-- Seach Filter  -->
-<h1>CSS Properties Reference</h1>
+<h3 class="intro">CSS Properties</h3>
 <div style="position:relative"><div id="searchicon"></div></div>
 <input type="text" id="searchstring" name="search" placeholder="Search.." oninput="filterSearch()">
 <div id="cssproperties">
@@ -1724,5 +1727,6 @@ label {
 </div>
 
 <br>
+  </div>
 </body>
 </html>
