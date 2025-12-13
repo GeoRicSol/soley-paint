@@ -44,7 +44,16 @@
 
 </style>
 
+    <script>
+		function setVidSrc(newVid) {
+    		document.getElementById("swim-vid").setAttribute("src",newVid); 
+			document.getElementById("swim-vid").setAttribute("autoplay",true); 
+		}
+ 
+    </script>
+
 </head>
+
 <body>
 	<div class="gap">
 		<div class="banner">Soley-Harris Swimming Club</div>
@@ -54,9 +63,11 @@
 		</p></div>
 
 		<h3 class="gap">Breast Stroke</h3>
-		
-	<video width="320"  height= "240" src="resources/breastsroke-kick.mp4" controls type="video/mp4">Swimming sample</video>
+	<div class="vid-display">
+	<video id="swim-vid"  height= "240" src="" controls type="video/mp4">Swimming sample</video>
+	</div>	
 	
+	<button onclick="setVidSrc('resources/breastsroke-kick.mp4')">Load Breast Stroke Kick Video</button>
 	
 	</div>
 </body>
