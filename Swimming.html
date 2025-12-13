@@ -45,9 +45,10 @@
 </style>
 
     <script>
-		function setVidSrc(newVid) {
+		function setVidSrc(newVid) { 
     		document.getElementById("swim-vid").setAttribute("src",newVid); 
-			document.getElementById("swim-vid").setAttribute("autoplay",true); 
+			document.getElementById("swim-vid").setAttribute("autoplay",true);
+			
 		}
  
     </script>
@@ -64,11 +65,11 @@
 
 		<h3 class="gap">Breast Stroke</h3>
 	<div class="vid-display">
-	<video id="swim-vid"  height= "240" src="" controls type="video/mp4">Swimming sample</video>
+	<video id="swim-vid" controls type="video/mp4">Swimming sample</video>
 	</div>	
-	
-	<button onclick="setVidSrc('resources/breastsroke-kick.mp4')">Load Breast Stroke Kick Video</button>
-	
+	<ol>
+		<li><button onclick="setVidSrc('resources/breaststroke.mp4')">Full Breaststroke</button></li>
+		<li><button onclick="setVidSrc('resources/breaststroke-kick.mp4')">Breaststroke Kick</button></li>
 	</div>
 </body>
 </html>
