@@ -6,29 +6,32 @@
 <style>
  
 	body {
-		background: url("resources/water.png")  repeat fixed center;
+	
 		background-color: rgba(145, 247, 235, 0.6);
   		background-blend-mode: lighten;
 	  	margin: 2px;
 	  	font-family: Arial, Helvetica, sans-serif;
+		max-width: 800px;
 	}
 
 	.banner {
-	  background: linear-gradient(180deg,#edf105,#f19305f3);
-	  color: #050505;
-	  padding: 14px 12px;
-	  text-align: center;
-	  font-size: 1.2rem;
-	  font-weight: 700;
-	  letter-spacing: 0.5px;
-	  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+	  	background: url("resources/water.png")  repeat fixed center;
+	  	color: #050505;
+	  	text-align: center;
+	  	font-size: 1.2rem;
+	  	font-weight: 700;
+		font-family: Georgia, serif;
+	  	letter-spacing: 0.5px;
+	  	box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+	  	width: 100%;
+		max-width: 800px;
 	}
 
 	.banner small {
-	  display: block;
-	  font-weight: 400;
-	  font-size: 0.6rem;
-	  opacity: 0.85;
+	  	display: block;
+	  	font-weight: 400;
+	  	font-size: 0.6rem;
+	  	opacity: 0.85;
 	}
 
 	.subject-links{
@@ -42,16 +45,49 @@
 		margin: 10px;
 	}
 
+	.main-text {
+		background-color: rgba(255, 255, 255, 0.8);
+		
+		border-radius: 8px;
+		box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+		width: 100%;
+		max-width: 800px;
+	}
+
 	.vid-display video {
 		width: 100%;
-		max-width: 600px;
+		max-width: 800px;
 		height: auto;
 		margin-bottom: 10px;
+	}
+
+	.arthur {
+		position: static;
+		top: 10px;
+		right: 10px;
+	}
+
+	.josh-Charl {
+		position: static;
+		top: 10px;
+		left: 10px;
+	}
+
+	.beginners {
+background-color: rgba(134, 224, 111, 0.8);
+	}
+
+	.fun {
+	  	color: black;
+		background-color: rgba(244, 241, 105, 0.8);
+	}
+		.swim {
+	  	color: black;
+		background-color: rgba(207, 105, 215, 0.8);
 	}
 	
 </style>
 
-<!-- width to 100% and height to auto -->
     <script>
 		function setVidSrc(newVid) { 
     		document.getElementById("swim-vid").setAttribute("src",newVid); 
@@ -65,55 +101,77 @@
 
 <body>
 	<div class="gap">
-		<div class="banner">Soley-Harris Swimming Club</div>
+		<div class="banner"><img class="josh-Charl" src="resources/josh-Charlie.png" alt="josh-Charlie Logo" width="100" height="100"><img class="arthur" src="resources/arthur.png" alt="arthur Logo" width="78" height="100"> Aqua Kids Swimming Club
 	
-		<div class="gap"><p>This web page has been put together for Joshua and Charlie as a swimming guide. It mainly consists of videos found 
-			on the web and links to other swimming resources.</p>
-		</p></div>
+	</div>
+		<div class="main-text"><p>If you are looking at this web page you are most likely interested in finding ways to engage your kids in swimming and develop their ability and skills.  I have created this web page with Arthur, Joshua and Charlie in mind. The page has been constructed for different swimming abilities. I have provided some videos for the children to view on their own, and other videos for mum and dad to view with them. Some of the videos show how mum and dad can make swimming fun thus engaging the kids.</p>
 
-	<div class="vid-display">
+		</p></div>
+		<div class="vid-display">
 	<video id="swim-vid" controls type="video/mp4">Swimming video</video>
 	</div>	
-	<h3 class="gap">Breast Stroke</h3>
+
+	<h3 class="gap">Videos</h3>
+
+	<div class="main-text"><p>The following videos have been grouped as swimmers, beginners and fun. Click on the buttons to play the videos.</p></div>
 
 <table>
-	<tr>
+	<tr class="swim">
+		<td>Br</td>
 		<td><button onclick="setVidSrc('resources/breaststroke.mp4')">Full Breaststroke</button></td>
 		<td><button onclick="setVidSrc('resources/breaststroke-kick.mp4')">Breaststroke Kick</button></td>
 	</tr>
-</table>
-
-
-	<h3 class="gap"> Frontcrawl</h3>
-	<table>
-	<tr>
-		<td><button onclick="setVidSrc('resources/frontcrawl-full.mp4')">Frontcrawl Full</button></td>
-		<td><button onclick="setVidSrc('resources/frontcrawl-arms.mp4')">Frontcrawl Arms</button></td>
-		<tr>
+	<tr class="swim">
+		<td>Fr</td>
 		<td><button onclick="setVidSrc('resources/frontcrawl-legs.mp4')">Frontcrawl Legs</button></td>
 		<td><button onclick="setVidSrc('resources/frontcrawl-legs-1.mp4')">Frontcrawl Legs(1)</button></td>
-		</tr>
-		<tr>
-		<td><button onclick="setVidSrc('resources/frontcrawl-breathing.mp4')">Frontcrawl Breathing</button></td>
-		</tr>
 	</tr>
-</table>
-
-	<h3 class="gap">Backstroke</h3>
-
-<table>
-	<tr>
+	<tr class="swim">
+		<td>Fr</td>
+		<td><button onclick="setVidSrc('resources/frontcrawl-breathing.mp4')">Frontcrawl Breathing</button></td>
+		<td><button onclick="setVidSrc('resources/frontcrawl-arms.mp4')">Frontcrawl Arms</button></td>
+	</tr>
+	<tr class="swim">
+		<td>Fr</td>
+		<td><button onclick="setVidSrc('resources/frontcrawl-full.mp4')">Frontcrawl Full</button></td>
+		<td>&#160;</td>
+	</tr>
+	</tr>
+	<tr class="swim">
+		<td>Ba</td>
 		<td><button onclick="setVidSrc('resources/backstroke-1.mp4')">Backstroke 1</button></td>
 		<td><button onclick="setVidSrc('resources/backstroke-2.mp4')">Backstroke 2</button></td>
 	</tr>
-</table>
-
-
-		<h3 class="gap">Misc</h3>
-		<table>
-	<tr>
-		<td><button onclick="setVidSrc('resources/floating-back.mp4')">Floating on yourBack</button></td>
-		<td><button onclick="setVidSrc('resources/frontcrawl-tumble-turn.mp4')">Frontcrawl Tumble Turn</button></td>
+	<tr class="swim">
+		<td>Ba</td>
+		<td><button onclick="setVidSrc('resources/floating-back.mp4')">Floating on Back</button></td>
+		<td><button onclick="setVidSrc('resources/backstroke-beginners.mp4')">Backstroke - Beginners</button>
+	</tr>
+	
+		<tr class="beginners">
+		<td>Bg</td>
+		<td><button onclick="setVidSrc('resources/aqua-mobile-2.mp4')">Comfortable in Water</button></td>
+		<td><button onclick="setVidSrc('resources/aqua-mobile-3.mp4')">Bubbles and Breathing</button>
+	</tr>
+	<tr class="beginners">
+		<td>Bg</td>
+		<td><button onclick="setVidSrc('resources/aqua-mobile-4.mp4')">How to Float</button></td>
+		<td><button onclick="setVidSrc('resources/aqua-mobile-5.mp4')">Kicking</button>
+	</tr>
+	<tr class="beginners">
+		<td>Bg</td>
+		<td><button onclick="setVidSrc('resources/aqua-mobile-6.mp4')">Gliding</button></td>
+		<td>&#160;</td>
+	</tr>
+	<tr class="fun">
+		<td>Fun</td>
+		<td><button onclick="setVidSrc('resources/blippi-part1.mp4')">Blippi Swimming - Part1</button></td>
+		<td><button onclick="setVidSrc('resources/blippi-part2.mp4')">Blipi Swimming - Part2</button>
+	</tr>
+	<tr class="fun">
+		<td>Fun</td>
+		<td><button onclick="setVidSrc('resources/finny-the-shark.mp4')">Mood Music</button></td>
+		<td>&#160;</td>
 	</tr>
 </table>
 	</div>

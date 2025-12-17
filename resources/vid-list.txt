@@ -1,0 +1,26 @@
+total 822480
+drwxr-xr-x 1 georg 197609        0 Dec 17 11:00 BL_proxy/
+-rw-r--r-- 1 georg 197609 41852883 Dec 17 10:23 aqua-mobile-2.mp4
+-rw-r--r-- 1 georg 197609 48520826 Dec 17 11:12 aqua-mobile-3.mp4
+-rw-r--r-- 1 georg 197609 40639311 Dec 17 10:49 aqua-mobile-4.mp4
+-rw-r--r-- 1 georg 197609 45382141 Dec 17 11:22 aqua-mobile-5.mp4
+-rw-r--r-- 1 georg 197609 45207013 Dec 17 11:29 aqua-mobile-6.mp4
+-rw-r--r-- 1 georg 197609  1301893 Dec 17 19:39 arthur.png
+-rw-r--r-- 1 georg 197609 48603851 Dec 16 16:35 backstroke-1.mp4
+-rw-r--r-- 1 georg 197609 50041705 Dec 16 16:59 backstroke-2.mp4
+-rw-r--r-- 1 georg 197609 47121850 Dec 17 11:40 backstroke-beginners.mp4
+-rw-r--r-- 1 georg 197609 35310716 Dec 16 20:16 blippi-part1.mp4
+-rw-r--r-- 1 georg 197609 39615823 Dec 16 20:21 blippi-part2.mp4
+-rw-r--r-- 1 georg 197609 42551882 Dec 13 14:10 breaststroke-kick.mp4
+-rw-r--r-- 1 georg 197609 47638106 Dec 13 18:14 breaststroke.mp4
+-rw-r--r-- 1 georg 197609 38779993 Dec 16 20:41 finny-the-shark.mp4
+-rw-r--r-- 1 georg 197609 40943190 Dec 16 10:49 floating-back.mp4
+-rw-r--r-- 1 georg 197609 39626783 Dec 15 21:03 frontcrawl-arms.mp4
+-rw-r--r-- 1 georg 197609 39875341 Dec 16 09:36 frontcrawl-breathing.mp4
+-rw-r--r-- 1 georg 197609 32265832 Dec 15 21:15 frontcrawl-full.mp4
+-rw-r--r-- 1 georg 197609 44022077 Dec 16 10:17 frontcrawl-legs-1.mp4
+-rw-r--r-- 1 georg 197609 31190618 Dec 15 21:24 frontcrawl-legs.mp4
+-rw-r--r-- 1 georg 197609 41070270 Dec 16 11:15 frontcrawl-tumble-turn.mp4
+-rw-r--r-- 1 georg 197609   163910 Dec 17 19:24 josh-Charlie.png
+-rw-r--r-- 1 georg 197609        0 Dec 17 21:01 vid-list.txt
+-rw-r--r-- 1 georg 197609   458298 Dec 15 11:25 water.png
