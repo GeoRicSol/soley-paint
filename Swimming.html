@@ -7,7 +7,7 @@
  
 	body {
 	
-		background-color: rgba(145, 247, 235, 0.6);
+		background-color: rgba(25, 220, 223, 0.2);
   		background-blend-mode: lighten;
 	  	margin: 2px;
 	  	font-family: Arial, Helvetica, sans-serif;
@@ -46,8 +46,6 @@
 	}
 
 	.main-text {
-		background-color: rgba(255, 255, 255, 0.8);
-		
 		border-radius: 8px;
 		box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 		width: 100%;
@@ -59,6 +57,7 @@
 		max-width: 800px;
 		height: auto;
 		margin-bottom: 10px;
+		position: relative;
 	}
 
 	.arthur {
@@ -81,7 +80,9 @@ background-color: rgba(134, 224, 111, 0.8);
 	  	color: black;
 		background-color: rgba(244, 241, 105, 0.8);
 	}
-		.swim {
+
+
+	.swim {
 	  	color: black;
 		background-color: rgba(207, 105, 215, 0.8);
 	}
@@ -101,21 +102,36 @@ background-color: rgba(134, 224, 111, 0.8);
 
 <body>
 	<div class="gap">
-		<div class="banner"><img class="josh-Charl" src="resources/josh-Charlie.png" alt="josh-Charlie Logo" width="100" height="100"><img class="arthur" src="resources/arthur.png" alt="arthur Logo" width="78" height="100"> Aqua Kids Swimming Club
+		<div class="banner"> Aqua Kids <img class="josh-Charl" src="resources/josh-Charlie.png" alt="josh-Charlie Logo" width="80" height="80"><img class="arthur" src="resources/arthur.png" alt="arthur Logo" width="64" height="80">Swim Club
 	
 	</div>
-		<div class="main-text"><p>If you are looking at this web page you are most likely interested in finding ways to engage your kids in swimming and develop their ability and skills.  I have created this web page with Arthur, Joshua and Charlie in mind. The page has been constructed for different swimming abilities. I have provided some videos for the children to view on their own, and other videos for mum and dad to view with them. Some of the videos show how mum and dad can make swimming fun thus engaging the kids.</p>
+		<div class="main-text"><p>If you are looking at this web page you are most likely interested in finding ways to develop the children's swimming ability and skills.</p>  <p>This web page has been made with Arthur, Joshua and Charlie in mind. Some videos are for the children to view on their own, other videos are for mum and dad to view with them.</p>
 
-		</p></div>
+		The following table is split into videos for beginners, more experienced and fun video.</p></div>
 		<div class="vid-display">
 	<video id="swim-vid" controls type="video/mp4">Swimming video</video>
 	</div>	
 
 	<h3 class="gap">Videos</h3>
 
-	<div class="main-text"><p>The following videos have been grouped as swimmers, beginners and fun. Click on the buttons to play the videos.</p></div>
 
 <table>
+	<tr class="beginners">
+		<td>Bg</td>
+		<td><button onclick="setVidSrc('resources/aqua-mobile-4.mp4')">How to Float</button></td>
+		<td><button onclick="setVidSrc('resources/aqua-mobile-5.mp4')">Kicking</button>
+	</tr>
+		</tr>
+		<tr class="beginners">
+		<td>Bg</td>
+		<td><button onclick="setVidSrc('resources/aqua-mobile-2.mp4')">Comfortable in Water</button></td>
+		<td><button onclick="setVidSrc('resources/aqua-mobile-3.mp4')">Bubbles and Breathing</button>
+	</tr>
+	<tr class="beginners">
+		<td>Bg</td>
+		<td><button onclick="setVidSrc('resources/aqua-mobile-6.mp4')">Gliding</button></td>
+		<td>&#160;</td>
+
 	<tr class="swim">
 		<td>Br</td>
 		<td><button onclick="setVidSrc('resources/breaststroke.mp4')">Full Breaststroke</button></td>
@@ -148,21 +164,7 @@ background-color: rgba(134, 224, 111, 0.8);
 		<td><button onclick="setVidSrc('resources/backstroke-beginners.mp4')">Backstroke - Beginners</button>
 	</tr>
 	
-		<tr class="beginners">
-		<td>Bg</td>
-		<td><button onclick="setVidSrc('resources/aqua-mobile-2.mp4')">Comfortable in Water</button></td>
-		<td><button onclick="setVidSrc('resources/aqua-mobile-3.mp4')">Bubbles and Breathing</button>
-	</tr>
-	<tr class="beginners">
-		<td>Bg</td>
-		<td><button onclick="setVidSrc('resources/aqua-mobile-4.mp4')">How to Float</button></td>
-		<td><button onclick="setVidSrc('resources/aqua-mobile-5.mp4')">Kicking</button>
-	</tr>
-	<tr class="beginners">
-		<td>Bg</td>
-		<td><button onclick="setVidSrc('resources/aqua-mobile-6.mp4')">Gliding</button></td>
-		<td>&#160;</td>
-	</tr>
+
 	<tr class="fun">
 		<td>Fun</td>
 		<td><button onclick="setVidSrc('resources/blippi-part1.mp4')">Blippi Swimming - Part1</button></td>
