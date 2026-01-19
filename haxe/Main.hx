@@ -144,12 +144,11 @@ Some videos are for the children to view on their own, other videos are for mum 
         
         injectCSS();
         // Add to DOM
-        Browser.document.body.appendChild(aboutScrn);
         Browser.document.body.appendChild(select);
+        Browser.document.body.appendChild(selectFC);
         Browser.document.body.appendChild(selectBS);
         Browser.document.body.appendChild(selectBrS);
-        Browser.document.body.appendChild(selectFC);
-        Browser.document.body.appendChild(br);
+        Browser.document.body.appendChild(aboutScrn);
         Browser.document.body.appendChild(video);
 
     }
@@ -172,6 +171,7 @@ Some videos are for the children to view on their own, other videos are for mum 
                 border: 1px solid #ccc;
                 background: lightblue;
                 margin-right: 5px;
+                margin-left: 5%;
             }
 
             #aboutScrn {
@@ -182,7 +182,7 @@ Some videos are for the children to view on their own, other videos are for mum 
                 border: 1px solid #ccc;
                 background: lightblue;
                 margin-right: 5px;
-                margin-left: 55px;
+                margin-left: 5%;
             }
 
             #videoSelectorBS {
@@ -193,6 +193,7 @@ Some videos are for the children to view on their own, other videos are for mum 
                 border: 1px solid #ccc;
                 background: lightblue;
                 margin-right: 5px;
+                margin-left: 5%;
             }
                             
             #videoSelectorBrS {
@@ -202,7 +203,6 @@ Some videos are for the children to view on their own, other videos are for mum 
                 border-radius: 6px;
                 border: 1px solid #ccc;
                 background: lightblue;
-                margin-right: 5px;
             }
             #videoSelectorFC {
                 padding: 8px 12px;
@@ -211,14 +211,15 @@ Some videos are for the children to view on their own, other videos are for mum 
                 border-radius: 6px;
                 border: 1px solid #ccc;
                 background: lightblue;
-                margin-right: 5px;
             }
 
             #player {
                 display: block;
                 border-radius: 8px;
                 box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-                margin-left: 80px;
+                margin-left: 5%;
+                width:90%;
+                height: auto;
             }
         ";
         Browser.document.head.appendChild(style);

@@ -45,21 +45,6 @@
 		margin: 10px;
 	}
 
-	.main-text {
-		border-radius: 8px;
-		box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-		width: 100%;
-		max-width: 800px;
-	}
-
-	.vid-display video {
-		width: 100%;
-		max-width: 800px;
-		height: auto;
-		margin-bottom: 10px;
-		position: relative;
-	}
-
 	.arthur {
 		position: static;
 		top: 10px;
@@ -72,26 +57,13 @@
 		left: 10px;
 	}
 
-	.beginners {
-background-color: rgba(134, 224, 111, 0.8);
-	}
 
-	.fun {
-	  	color: black;
-		background-color: rgba(244, 241, 105, 0.8);
-	}
-
-
-	.swim {
-	  	color: black;
-		background-color: rgba(207, 105, 215, 0.8);
-	}
 	
 </style>
 
     <script>
 		function setVidSrc(newVid) { 
-    		document.getElementById("swim-vid").setAttribute("src",newVid); 
+    	document.getElementById("swim-vid").setAttribute("src",newVid); 
 			document.getElementById("swim-vid").setAttribute("autoplay",true);
 			
 		}
