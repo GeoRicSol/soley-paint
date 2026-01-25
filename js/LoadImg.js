@@ -67,7 +67,7 @@ haxe_iterators_ArrayIterator.prototype = {
 		return this.array[this.current++];
 	}
 };
-LoadImg.images = [{ url : "img/bailey-playing.jpg", title : "Bailey at Play"},{ url : "img/cheetah.jpg", title : "Cheetah"},{ url : "img/chimp.jpg", title : "Chimpanzee"},{ url : "img/elephant.jpg", title : "Elephant's Stare"},{ url : "img/elephant-2.jpg", title : "Elephant Running"},{ url : "img/giraffe.jpg", title : "Giraffe"},{ url : "img/lion.jpg", title : "Lion"},{ url : "img/rhino.jpg", title : "Rhino's Stare"},{ url : "img/rhino-2.jpg", title : "Rhino Running"},{ url : "img/tiger.jpg", title : "Friendly Tiger"},{ url : "img/tiger-2.jpg", title : "Fierce Tiger"}];
+LoadImg.images = [{ url : "img/artist.jpg", title : "Bailey and I welcome you to my portfolio"},{ url : "img/bailey-playing.jpg", title : "Bailey at Play"},{ url : "img/cheetah.jpg", title : "Cheetah"},{ url : "img/chimp.jpg", title : "Chimpanzee"},{ url : "img/elephant.jpg", title : "Elephant's Stare"},{ url : "img/elephant-2.jpg", title : "Elephant Running"},{ url : "img/giraffe.jpg", title : "Giraffe"},{ url : "img/lion.jpg", title : "Lion"},{ url : "img/rhino.jpg", title : "Rhino's Stare"},{ url : "img/rhino-2.jpg", title : "Rhino Running"},{ url : "img/tiger.jpg", title : "Friendly Tiger"},{ url : "img/tiger-2.jpg", title : "Fierce Tiger"}];
 LoadImg.index = 0;
 LoadImg.main();
 })({});
