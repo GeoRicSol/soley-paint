@@ -1,0 +1,4 @@
+-p buildLoadImg.hx
+-js js/LoadImg.js
+-main LoadImg.hx
+-lib openfl

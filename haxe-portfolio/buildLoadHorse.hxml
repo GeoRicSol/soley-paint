@@ -1,0 +1,4 @@
+-p LoadImgHorse.hx
+-js js/LoadImgHorse.js
+-main LoadImgHorse.hx
+-lib openfl

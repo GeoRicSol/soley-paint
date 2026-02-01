@@ -1,0 +1,4 @@
+-p LoadImgPeople.hx
+-js js/LoadImgPeople.js
+-main LoadImgPeople.hx
+-lib openfl

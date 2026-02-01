@@ -1,0 +1,4 @@
+-p LoadImgPalette.hx
+-js js/LoadImgPalette.js
+-main LoadImgPalette.hx
+-lib openfl

@@ -1,0 +1,4 @@
+-p LoadImgTiger.hx
+-js js/LoadImgTiger.js
+-main LoadImgTiger.hx
+-lib openfl

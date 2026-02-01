@@ -1,0 +1,4 @@
+-p LoadImgDog.hx
+-js js/LoadImgDog.js
+-main LoadImgDog.hx
+-lib openfl
