@@ -74,13 +74,29 @@ class LoadImgTiger {
     }
 
     static function fadeUpdate(artwork:ImageElement, title:DivElement) {
-        // Start fade-out
-        artwork.classList.add("fade-out");
-        // After fade-out completes, change image and fade back in
-        Browser.window.setTimeout(function() {
-            artwork.src = images[index].url; 
-            title.innerText = images[index].title;
-            artwork.classList.remove("fade-out");
-        }, 300); // slightly shorter than CSS transition for smoothness
-    }
+    // Start fade-out
+    artwork.classList.add("fade-out");
+
+    Browser.window.setTimeout(function() {
+        artwork.src = images[index].url;
+        title.innerText = images[index].title;
+
+        // Wait for the new image to fully load
+        artwork.onload = function(_) {
+            var w = artwork.naturalWidth;
+            var h = artwork.naturalHeight;
+
+            // If height > 2 × width → tall image
+            if (h > 2 * w) {
+                artwork.style.width = "auto";
+                artwork.style.height = "600px";
+            } else {
+                artwork.style.width = "88%";
+                artwork.style.height = "auto";
+            }
+        };
+
+        artwork.classList.remove("fade-out");
+    }, 300);
+}
 }

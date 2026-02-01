@@ -52,6 +52,17 @@ LoadImgDog.fadeUpdate = function(artwork,title) {
 	window.setTimeout(function() {
 		artwork.src = LoadImgDog.images[LoadImgDog.index].url;
 		title.innerText = LoadImgDog.images[LoadImgDog.index].title;
+		artwork.onload = function(_) {
+			var w = artwork.naturalWidth;
+			var h = artwork.naturalHeight;
+			if(h > 2 * w) {
+				artwork.style.width = "auto";
+				artwork.style.height = "600px";
+			} else {
+				artwork.style.width = "88%";
+				artwork.style.height = "auto";
+			}
+		};
 		artwork.classList.remove("fade-out");
 	},300);
 };
