@@ -8,7 +8,8 @@ import js.html.Console;
 
 class LoadImgDog {
     static var images = [
-        { url: "../img/bailey-playing.jpg", title: "Bailey Playing" }
+        { url: "../img/bailey-playing.jpg", title: "Bailey Playing" },
+        { url: "../img/bailey.jpg", title: "Bailey" }
     ];
 
     static var index:Int = 0;

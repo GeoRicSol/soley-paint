@@ -8,7 +8,8 @@ import js.html.Console;
 
 class LoadImgHorse {
     static var images = [
-        { url: "../img/space.jpg", title: "No Images Loaded Yet" }
+        { url: "../img/horse1.jpg", title: "Horse - 1" },
+        { url: "../img/horse2.jpg", title: "Horse - 2" }
     ];
 
     static var index:Int = 0;

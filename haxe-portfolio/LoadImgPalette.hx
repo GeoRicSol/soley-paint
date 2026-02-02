@@ -8,7 +8,8 @@ import js.html.Console;
 
 class LoadImgPalette {
     static var images = [
-        { url: "../img/space.jpg", title: "No Images Loaded Yet" }
+        { url: "../img/boat.jpg", title: "Boat" },
+        { url: "../img/seascape.jpg", title: "Sea Scene" }
     ];
 
     static var index:Int = 0;

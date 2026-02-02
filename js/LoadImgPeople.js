@@ -78,7 +78,7 @@ haxe_iterators_ArrayIterator.prototype = {
 		return this.array[this.current++];
 	}
 };
-LoadImgPeople.images = [{ url : "../img/space.jpg", title : "No Images Loaded Yet"}];
+LoadImgPeople.images = [{ url : "../img/onTheBeach.jpg", title : "Beach Scene"},{ url : "../img/nicOnTheBeach.jpg", title : "Nicola - Beach Scene"},{ url : "../img/andyOnTheBeach.jpg", title : "Andy - Beach Scene"}];
 LoadImgPeople.index = 0;
 LoadImgPeople.main();
 })({});
