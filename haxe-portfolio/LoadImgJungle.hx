@@ -1,10 +1,8 @@
-
 import js.Browser;
 import js.html.ButtonElement;
 import js.html.ImageElement;
 import js.html.DivElement;
 import js.html.KeyboardEvent;
-import js.html.Console;
 
 class LoadImgJungle {
     static var images = [
@@ -33,10 +31,15 @@ class LoadImgJungle {
 
     static var index:Int = 0;
 
+    // Swipe/drag tracking
+    static var startX:Float = 0;
+    static var endX:Float = 0;
+    static var dragging:Bool = false;
+
     static function main() {
         var artwork:ImageElement = cast Browser.document.getElementById("artwork");
         var title:DivElement = cast Browser.document.getElementById("title");
-        
+
         var btn1:ButtonElement = cast Browser.document.getElementById("btn1");
         var btn2:ButtonElement = cast Browser.document.getElementById("btn2");
         var btn3:ButtonElement = cast Browser.document.getElementById("btn3");
@@ -81,33 +84,91 @@ class LoadImgJungle {
             }
         };
 
+        // ---------------------------------------------------------
+        // TOUCH SWIPE SUPPORT
+        // ---------------------------------------------------------
+        artwork.addEventListener("touchstart", function(e) {
+            startX = e.touches[0].clientX;
+            dragging = true;
+        });
+
+        artwork.addEventListener("touchmove", function(e) {
+            if (dragging) endX = e.touches[0].clientX;
+        });
+
+        artwork.addEventListener("touchend", function(e) {
+            if (dragging) {
+                dragging = false;
+                handleSwipe(artwork, title);
+            }
+        });
+
+        // ---------------------------------------------------------
+        // MOUSE DRAG SUPPORT (Desktop)
+        // ---------------------------------------------------------
+        artwork.addEventListener("mousedown", function(e) {
+            startX = e.clientX;
+            dragging = true;
+        });
+
+        Browser.document.addEventListener("mousemove", function(e) {
+            if (dragging) endX = e.clientX;
+        });
+
+        Browser.document.addEventListener("mouseup", function(e) {
+            if (dragging) {
+                dragging = false;
+                handleSwipe(artwork, title);
+            }
+        });
+
         fadeUpdate(artwork, title);
     }
 
+    // ---------------------------------------------------------
+    // SWIPE HANDLER
+    // ---------------------------------------------------------
+    static function handleSwipe(artwork:ImageElement, title:DivElement):Void {
+        var diff = endX - startX;
+        var threshold = 50; // Minimum swipe distance
+
+        if (Math.abs(diff) < threshold) return;
+
+        if (diff < 0) {
+            // Swipe left → next
+            index = (index + 1) % images.length;
+        } else {
+            // Swipe right → previous
+            index = (index - 1 + images.length) % images.length;
+        }
+
+        fadeUpdate(artwork, title);
+    }
+
+    // ---------------------------------------------------------
+    // FADE + IMAGE UPDATE
+    // ---------------------------------------------------------
     static function fadeUpdate(artwork:ImageElement, title:DivElement) {
-    // Start fade-out
-    artwork.classList.add("fade-out");
+        artwork.classList.add("fade-out");
 
-    Browser.window.setTimeout(function() {
-        artwork.src = images[index].url;
-        title.innerText = images[index].title;
+        Browser.window.setTimeout(function() {
+            artwork.src = images[index].url;
+            title.innerText = images[index].title;
 
-        // Wait for the new image to fully load
-        artwork.onload = function(_) {
-            var w = artwork.naturalWidth;
-            var h = artwork.naturalHeight;
+            artwork.onload = function(_) {
+                var w = artwork.naturalWidth;
+                var h = artwork.naturalHeight;
 
-            // If height > 2 × width → tall image
-            if (h > 2 * w) {
-                artwork.style.width = "auto";
-                artwork.style.height = "600px";
-            } else {
-                artwork.style.width = "88%";
-                artwork.style.height = "auto";
-            }
-        };
+                if (h > 2 * w) {
+                    artwork.style.width = "auto";
+                    artwork.style.height = "600px";
+                } else {
+                    artwork.style.width = "88%";
+                    artwork.style.height = "auto";
+                }
+            };
 
-        artwork.classList.remove("fade-out");
-    }, 300);
-}
+            artwork.classList.remove("fade-out");
+        }, 300);
+    }
 }

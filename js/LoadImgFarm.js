@@ -45,6 +45,49 @@ LoadImgFarm.main = function() {
 		default:
 		}
 	};
+	artwork.addEventListener("touchstart",function(e) {
+		LoadImgFarm.startX = e.touches[0].clientX;
+		LoadImgFarm.dragging = true;
+	});
+	artwork.addEventListener("touchmove",function(e) {
+		if(LoadImgFarm.dragging) {
+			LoadImgFarm.endX = e.touches[0].clientX;
+		}
+	});
+	artwork.addEventListener("touchend",function(e) {
+		if(LoadImgFarm.dragging) {
+			LoadImgFarm.dragging = false;
+			LoadImgFarm.handleSwipe(artwork,title);
+		}
+	});
+	artwork.addEventListener("mousedown",function(e) {
+		LoadImgFarm.startX = e.clientX;
+		LoadImgFarm.dragging = true;
+	});
+	window.document.addEventListener("mousemove",function(e) {
+		if(LoadImgFarm.dragging) {
+			LoadImgFarm.endX = e.clientX;
+		}
+	});
+	window.document.addEventListener("mouseup",function(e) {
+		if(LoadImgFarm.dragging) {
+			LoadImgFarm.dragging = false;
+			LoadImgFarm.handleSwipe(artwork,title);
+		}
+	});
+	LoadImgFarm.fadeUpdate(artwork,title);
+};
+LoadImgFarm.handleSwipe = function(artwork,title) {
+	var diff = LoadImgFarm.endX - LoadImgFarm.startX;
+	var threshold = 50;
+	if(Math.abs(diff) < threshold) {
+		return;
+	}
+	if(diff < 0) {
+		LoadImgFarm.index = (LoadImgFarm.index + 1) % LoadImgFarm.images.length;
+	} else {
+		LoadImgFarm.index = (LoadImgFarm.index - 1 + LoadImgFarm.images.length) % LoadImgFarm.images.length;
+	}
 	LoadImgFarm.fadeUpdate(artwork,title);
 };
 LoadImgFarm.fadeUpdate = function(artwork,title) {
@@ -80,5 +123,8 @@ haxe_iterators_ArrayIterator.prototype = {
 };
 LoadImgFarm.images = [{ url : "../img/cow.jpg", title : "Cow - 1"},{ url : "../img/cow1.jpg", title : "Cow - 2"},{ url : "../img/donkey.jpg", title : "Donkey - 1"},{ url : "../img/donkey1.jpg", title : "Donkey - 2"},{ url : "../img/donkey2.jpg", title : "Donkey - 3"},{ url : "../img/donkey3.jpg", title : "Donkey - 4"},{ url : "../img/pig.jpg", title : "Pig"},{ url : "../img/pigs.jpg", title : "Pigs"}];
 LoadImgFarm.index = 0;
+LoadImgFarm.startX = 0;
+LoadImgFarm.endX = 0;
+LoadImgFarm.dragging = false;
 LoadImgFarm.main();
 })({});

@@ -45,6 +45,49 @@ LoadImgPeople.main = function() {
 		default:
 		}
 	};
+	artwork.addEventListener("touchstart",function(e) {
+		LoadImgPeople.startX = e.touches[0].clientX;
+		LoadImgPeople.dragging = true;
+	});
+	artwork.addEventListener("touchmove",function(e) {
+		if(LoadImgPeople.dragging) {
+			LoadImgPeople.endX = e.touches[0].clientX;
+		}
+	});
+	artwork.addEventListener("touchend",function(e) {
+		if(LoadImgPeople.dragging) {
+			LoadImgPeople.dragging = false;
+			LoadImgPeople.handleSwipe(artwork,title);
+		}
+	});
+	artwork.addEventListener("mousedown",function(e) {
+		LoadImgPeople.startX = e.clientX;
+		LoadImgPeople.dragging = true;
+	});
+	window.document.addEventListener("mousemove",function(e) {
+		if(LoadImgPeople.dragging) {
+			LoadImgPeople.endX = e.clientX;
+		}
+	});
+	window.document.addEventListener("mouseup",function(e) {
+		if(LoadImgPeople.dragging) {
+			LoadImgPeople.dragging = false;
+			LoadImgPeople.handleSwipe(artwork,title);
+		}
+	});
+	LoadImgPeople.fadeUpdate(artwork,title);
+};
+LoadImgPeople.handleSwipe = function(artwork,title) {
+	var diff = LoadImgPeople.endX - LoadImgPeople.startX;
+	var threshold = 50;
+	if(Math.abs(diff) < threshold) {
+		return;
+	}
+	if(diff < 0) {
+		LoadImgPeople.index = (LoadImgPeople.index + 1) % LoadImgPeople.images.length;
+	} else {
+		LoadImgPeople.index = (LoadImgPeople.index - 1 + LoadImgPeople.images.length) % LoadImgPeople.images.length;
+	}
 	LoadImgPeople.fadeUpdate(artwork,title);
 };
 LoadImgPeople.fadeUpdate = function(artwork,title) {
@@ -80,5 +123,8 @@ haxe_iterators_ArrayIterator.prototype = {
 };
 LoadImgPeople.images = [{ url : "../img/onTheBeach.jpg", title : "Beach Scene"},{ url : "../img/nicOnTheBeach.jpg", title : "Nicola - Beach Scene"},{ url : "../img/andyOnTheBeach.jpg", title : "Andy - Beach Scene"},{ url : "../img/family.jpg", title : "Family - Beach Scene"}];
 LoadImgPeople.index = 0;
+LoadImgPeople.startX = 0;
+LoadImgPeople.endX = 0;
+LoadImgPeople.dragging = false;
 LoadImgPeople.main();
 })({});

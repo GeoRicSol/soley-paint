@@ -45,6 +45,49 @@ LoadImgJungle.main = function() {
 		default:
 		}
 	};
+	artwork.addEventListener("touchstart",function(e) {
+		LoadImgJungle.startX = e.touches[0].clientX;
+		LoadImgJungle.dragging = true;
+	});
+	artwork.addEventListener("touchmove",function(e) {
+		if(LoadImgJungle.dragging) {
+			LoadImgJungle.endX = e.touches[0].clientX;
+		}
+	});
+	artwork.addEventListener("touchend",function(e) {
+		if(LoadImgJungle.dragging) {
+			LoadImgJungle.dragging = false;
+			LoadImgJungle.handleSwipe(artwork,title);
+		}
+	});
+	artwork.addEventListener("mousedown",function(e) {
+		LoadImgJungle.startX = e.clientX;
+		LoadImgJungle.dragging = true;
+	});
+	window.document.addEventListener("mousemove",function(e) {
+		if(LoadImgJungle.dragging) {
+			LoadImgJungle.endX = e.clientX;
+		}
+	});
+	window.document.addEventListener("mouseup",function(e) {
+		if(LoadImgJungle.dragging) {
+			LoadImgJungle.dragging = false;
+			LoadImgJungle.handleSwipe(artwork,title);
+		}
+	});
+	LoadImgJungle.fadeUpdate(artwork,title);
+};
+LoadImgJungle.handleSwipe = function(artwork,title) {
+	var diff = LoadImgJungle.endX - LoadImgJungle.startX;
+	var threshold = 50;
+	if(Math.abs(diff) < threshold) {
+		return;
+	}
+	if(diff < 0) {
+		LoadImgJungle.index = (LoadImgJungle.index + 1) % LoadImgJungle.images.length;
+	} else {
+		LoadImgJungle.index = (LoadImgJungle.index - 1 + LoadImgJungle.images.length) % LoadImgJungle.images.length;
+	}
 	LoadImgJungle.fadeUpdate(artwork,title);
 };
 LoadImgJungle.fadeUpdate = function(artwork,title) {
@@ -80,5 +123,8 @@ haxe_iterators_ArrayIterator.prototype = {
 };
 LoadImgJungle.images = [{ url : "../img/cheetah.jpg", title : "Cheetah"},{ url : "../img/chimp.jpg", title : "Chimpanzee"},{ url : "../img/elephant.jpg", title : "Elephant - 1"},{ url : "../img/elephant-2.jpg", title : "Elephant - 2"},{ url : "../img/elephant-3.jpg", title : "Elephant - 3"},{ url : "../img/elephant-4.jpg", title : "Elephant - 4"},{ url : "../img/elephant5.jpg", title : "Elephant - 5"},{ url : "../img/elephant6.jpg", title : "Elephant - 6"},{ url : "../img/giraffe.jpg", title : "Giraffe - 1"},{ url : "../img/giraffe1.jpg", title : "Giraffe - 2"},{ url : "../img/leopard.jpg", title : "Leopard - 1"},{ url : "../img/leopard1.jpg", title : "Leopard - 2"},{ url : "../img/lima.jpg", title : "Lima - 1"},{ url : "../img/lima1.jpg", title : "Lima - 2"},{ url : "../img/lion.jpg", title : "Lion - 1"},{ url : "../img/lion1.jpg", title : "Lion - 2"},{ url : "../img/panda.jpg", title : "Panda - 1"},{ url : "../img/rhino.jpg", title : "Rhino's Stare"},{ url : "../img/rhino-2.jpg", title : "Rhino Running"},{ url : "../img/tiger.jpg", title : "Friendly Tiger"},{ url : "../img/tiger-2.jpg", title : "Fierce Tiger"}];
 LoadImgJungle.index = 0;
+LoadImgJungle.startX = 0;
+LoadImgJungle.endX = 0;
+LoadImgJungle.dragging = false;
 LoadImgJungle.main();
 })({});

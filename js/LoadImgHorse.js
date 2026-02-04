@@ -45,6 +45,49 @@ LoadImgHorse.main = function() {
 		default:
 		}
 	};
+	artwork.addEventListener("touchstart",function(e) {
+		LoadImgHorse.startX = e.touches[0].clientX;
+		LoadImgHorse.dragging = true;
+	});
+	artwork.addEventListener("touchmove",function(e) {
+		if(LoadImgHorse.dragging) {
+			LoadImgHorse.endX = e.touches[0].clientX;
+		}
+	});
+	artwork.addEventListener("touchend",function(e) {
+		if(LoadImgHorse.dragging) {
+			LoadImgHorse.dragging = false;
+			LoadImgHorse.handleSwipe(artwork,title);
+		}
+	});
+	artwork.addEventListener("mousedown",function(e) {
+		LoadImgHorse.startX = e.clientX;
+		LoadImgHorse.dragging = true;
+	});
+	window.document.addEventListener("mousemove",function(e) {
+		if(LoadImgHorse.dragging) {
+			LoadImgHorse.endX = e.clientX;
+		}
+	});
+	window.document.addEventListener("mouseup",function(e) {
+		if(LoadImgHorse.dragging) {
+			LoadImgHorse.dragging = false;
+			LoadImgHorse.handleSwipe(artwork,title);
+		}
+	});
+	LoadImgHorse.fadeUpdate(artwork,title);
+};
+LoadImgHorse.handleSwipe = function(artwork,title) {
+	var diff = LoadImgHorse.endX - LoadImgHorse.startX;
+	var threshold = 50;
+	if(Math.abs(diff) < threshold) {
+		return;
+	}
+	if(diff < 0) {
+		LoadImgHorse.index = (LoadImgHorse.index + 1) % LoadImgHorse.images.length;
+	} else {
+		LoadImgHorse.index = (LoadImgHorse.index - 1 + LoadImgHorse.images.length) % LoadImgHorse.images.length;
+	}
 	LoadImgHorse.fadeUpdate(artwork,title);
 };
 LoadImgHorse.fadeUpdate = function(artwork,title) {
@@ -80,5 +123,8 @@ haxe_iterators_ArrayIterator.prototype = {
 };
 LoadImgHorse.images = [{ url : "../img/horse1.jpg", title : "Horse - 1"},{ url : "../img/horse2.jpg", title : "Horse - 2"},{ url : "../img/horse3.jpg", title : "Horse - 3"},{ url : "../img/horse4.jpg", title : "Horse - 4"},{ url : "../img/horse5.jpg", title : "Horse - 5"},{ url : "../img/horse6.jpg", title : "Horse - 6"},{ url : "../img/horse7.jpg", title : "Horse - 7"},{ url : "../img/horse8.jpg", title : "Horse - 8"},{ url : "../img/horse9.jpg", title : "Horse - 9"},{ url : "../img/horse10.jpg", title : "Horse - 10"},{ url : "../img/horse11.jpg", title : "Horse - 11"},{ url : "../img/horse12.jpg", title : "Horse - 12"},{ url : "../img/horse13.jpg", title : "Horse - 13"},{ url : "../img/horse14.jpg", title : "Horse - 14"}];
 LoadImgHorse.index = 0;
+LoadImgHorse.startX = 0;
+LoadImgHorse.endX = 0;
+LoadImgHorse.dragging = false;
 LoadImgHorse.main();
 })({});

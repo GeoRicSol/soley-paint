@@ -45,6 +45,49 @@ LoadImgDog.main = function() {
 		default:
 		}
 	};
+	artwork.addEventListener("touchstart",function(e) {
+		LoadImgDog.startX = e.touches[0].clientX;
+		LoadImgDog.dragging = true;
+	});
+	artwork.addEventListener("touchmove",function(e) {
+		if(LoadImgDog.dragging) {
+			LoadImgDog.endX = e.touches[0].clientX;
+		}
+	});
+	artwork.addEventListener("touchend",function(e) {
+		if(LoadImgDog.dragging) {
+			LoadImgDog.dragging = false;
+			LoadImgDog.handleSwipe(artwork,title);
+		}
+	});
+	artwork.addEventListener("mousedown",function(e) {
+		LoadImgDog.startX = e.clientX;
+		LoadImgDog.dragging = true;
+	});
+	window.document.addEventListener("mousemove",function(e) {
+		if(LoadImgDog.dragging) {
+			LoadImgDog.endX = e.clientX;
+		}
+	});
+	window.document.addEventListener("mouseup",function(e) {
+		if(LoadImgDog.dragging) {
+			LoadImgDog.dragging = false;
+			LoadImgDog.handleSwipe(artwork,title);
+		}
+	});
+	LoadImgDog.fadeUpdate(artwork,title);
+};
+LoadImgDog.handleSwipe = function(artwork,title) {
+	var diff = LoadImgDog.endX - LoadImgDog.startX;
+	var threshold = 50;
+	if(Math.abs(diff) < threshold) {
+		return;
+	}
+	if(diff < 0) {
+		LoadImgDog.index = (LoadImgDog.index + 1) % LoadImgDog.images.length;
+	} else {
+		LoadImgDog.index = (LoadImgDog.index - 1 + LoadImgDog.images.length) % LoadImgDog.images.length;
+	}
 	LoadImgDog.fadeUpdate(artwork,title);
 };
 LoadImgDog.fadeUpdate = function(artwork,title) {
@@ -80,5 +123,8 @@ haxe_iterators_ArrayIterator.prototype = {
 };
 LoadImgDog.images = [{ url : "../img/bailey-playing.jpg", title : "Bailey Playing"},{ url : "../img/bailey.jpg", title : "Bailey"},{ url : "../img/dog.jpg", title : "Dog - 1"},{ url : "../img/dog1.jpg", title : "Dog - 2"},{ url : "../img/dog2.jpg", title : "Dog - 3"},{ url : "../img/dog3.jpg", title : "Dog - 4"},{ url : "../img/dog4.jpg", title : "Dog - 5"},{ url : "../img/dog5.jpg", title : "Dog - 6"},{ url : "../img/dog6.jpg", title : "Dog - 7"},{ url : "../img/dog7.jpg", title : "Dog - 8"},{ url : "../img/oscar.jpg", title : "Oscar"},{ url : "../img/rosie.jpg", title : "Rosie"}];
 LoadImgDog.index = 0;
+LoadImgDog.startX = 0;
+LoadImgDog.endX = 0;
+LoadImgDog.dragging = false;
 LoadImgDog.main();
 })({});

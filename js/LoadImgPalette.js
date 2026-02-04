@@ -45,6 +45,49 @@ LoadImgPalette.main = function() {
 		default:
 		}
 	};
+	artwork.addEventListener("touchstart",function(e) {
+		LoadImgPalette.startX = e.touches[0].clientX;
+		LoadImgPalette.dragging = true;
+	});
+	artwork.addEventListener("touchmove",function(e) {
+		if(LoadImgPalette.dragging) {
+			LoadImgPalette.endX = e.touches[0].clientX;
+		}
+	});
+	artwork.addEventListener("touchend",function(e) {
+		if(LoadImgPalette.dragging) {
+			LoadImgPalette.dragging = false;
+			LoadImgPalette.handleSwipe(artwork,title);
+		}
+	});
+	artwork.addEventListener("mousedown",function(e) {
+		LoadImgPalette.startX = e.clientX;
+		LoadImgPalette.dragging = true;
+	});
+	window.document.addEventListener("mousemove",function(e) {
+		if(LoadImgPalette.dragging) {
+			LoadImgPalette.endX = e.clientX;
+		}
+	});
+	window.document.addEventListener("mouseup",function(e) {
+		if(LoadImgPalette.dragging) {
+			LoadImgPalette.dragging = false;
+			LoadImgPalette.handleSwipe(artwork,title);
+		}
+	});
+	LoadImgPalette.fadeUpdate(artwork,title);
+};
+LoadImgPalette.handleSwipe = function(artwork,title) {
+	var diff = LoadImgPalette.endX - LoadImgPalette.startX;
+	var threshold = 50;
+	if(Math.abs(diff) < threshold) {
+		return;
+	}
+	if(diff < 0) {
+		LoadImgPalette.index = (LoadImgPalette.index + 1) % LoadImgPalette.images.length;
+	} else {
+		LoadImgPalette.index = (LoadImgPalette.index - 1 + LoadImgPalette.images.length) % LoadImgPalette.images.length;
+	}
 	LoadImgPalette.fadeUpdate(artwork,title);
 };
 LoadImgPalette.fadeUpdate = function(artwork,title) {
@@ -80,5 +123,8 @@ haxe_iterators_ArrayIterator.prototype = {
 };
 LoadImgPalette.images = [{ url : "../img/boat.jpg", title : "Boat"},{ url : "../img/seascape.jpg", title : "Sea Scene"},{ url : "../img/jellyfish.jpg", title : "Jelly Fish"},{ url : "../img/octopus.jpg", title : "Octopus"},{ url : "../img/otter.jpg", title : "Otter"},{ url : "../img/penguin.jpg", title : "Penguin"},{ url : "../img/tortoise.jpg", title : "Tortoise"},{ url : "../img/turtle.jpg", title : "Turtle"}];
 LoadImgPalette.index = 0;
+LoadImgPalette.startX = 0;
+LoadImgPalette.endX = 0;
+LoadImgPalette.dragging = false;
 LoadImgPalette.main();
 })({});
