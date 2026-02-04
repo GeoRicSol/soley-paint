@@ -78,7 +78,7 @@ haxe_iterators_ArrayIterator.prototype = {
 		return this.array[this.current++];
 	}
 };
-LoadImgPalette.images = [{ url : "../img/boat.jpg", title : "Boat"},{ url : "../img/seascape.jpg", title : "Sea Scene"}];
+LoadImgPalette.images = [{ url : "../img/boat.jpg", title : "Boat"},{ url : "../img/seascape.jpg", title : "Sea Scene"},{ url : "../img/jellyfish.jpg", title : "Jelly Fish"},{ url : "../img/octopus.jpg", title : "Octopus"},{ url : "../img/otter.jpg", title : "Otter"},{ url : "../img/penguin.jpg", title : "Penguin"},{ url : "../img/tortoise.jpg", title : "Tortoise"},{ url : "../img/turtle.jpg", title : "Turtle"}];
 LoadImgPalette.index = 0;
 LoadImgPalette.main();
 })({});

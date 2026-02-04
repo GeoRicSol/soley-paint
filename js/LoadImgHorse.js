@@ -78,7 +78,7 @@ haxe_iterators_ArrayIterator.prototype = {
 		return this.array[this.current++];
 	}
 };
-LoadImgHorse.images = [{ url : "../img/horse1.jpg", title : "Horse - 1"},{ url : "../img/horse2.jpg", title : "Horse - 2"}];
+LoadImgHorse.images = [{ url : "../img/horse1.jpg", title : "Horse - 1"},{ url : "../img/horse2.jpg", title : "Horse - 2"},{ url : "../img/horse3.jpg", title : "Horse - 3"},{ url : "../img/horse4.jpg", title : "Horse - 4"},{ url : "../img/horse5.jpg", title : "Horse - 5"},{ url : "../img/horse6.jpg", title : "Horse - 6"},{ url : "../img/horse7.jpg", title : "Horse - 7"},{ url : "../img/horse8.jpg", title : "Horse - 8"},{ url : "../img/horse9.jpg", title : "Horse - 9"},{ url : "../img/horse10.jpg", title : "Horse - 10"},{ url : "../img/horse11.jpg", title : "Horse - 11"},{ url : "../img/horse12.jpg", title : "Horse - 12"},{ url : "../img/horse13.jpg", title : "Horse - 13"},{ url : "../img/horse14.jpg", title : "Horse - 14"}];
 LoadImgHorse.index = 0;
 LoadImgHorse.main();
 })({});

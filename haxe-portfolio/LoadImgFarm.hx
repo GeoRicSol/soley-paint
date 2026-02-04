@@ -6,10 +6,16 @@ import js.html.DivElement;
 import js.html.KeyboardEvent;
 import js.html.Console;
 
-class LoadImgCat {
+class LoadImgFarm {
     static var images = [
-        { url: "../img/oscar.jpg", title: "Oscar" },
-        { url: "../img/rosie.jpg", title: "Rosie" }
+        { url: "../img/cow.jpg", title: "Cow - 1"},
+        { url: "../img/cow1.jpg", title: "Cow - 2" },
+        { url: "../img/donkey.jpg", title: "Donkey - 1" },
+        { url: "../img/donkey1.jpg", title: "Donkey - 2" },
+        {url: "../img/donkey2.jpg", title: "Donkey - 3" },
+        { url: "../img/donkey3.jpg", title: "Donkey - 4" },
+        { url: "../img/pig.jpg", title: "Pig" },
+        { url: "../img/pigs.jpg", title: "Pigs" }
     ];
 
     static var index:Int = 0;

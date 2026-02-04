@@ -9,7 +9,17 @@ import js.html.Console;
 class LoadImgDog {
     static var images = [
         { url: "../img/bailey-playing.jpg", title: "Bailey Playing" },
-        { url: "../img/bailey.jpg", title: "Bailey" }
+        { url: "../img/bailey.jpg", title: "Bailey" },
+        { url: "../img/dog.jpg", title: "Dog - 1" },
+        { url: "../img/dog1.jpg", title: "Dog - 2" },
+        { url: "../img/dog2.jpg", title: "Dog - 3" },
+        { url: "../img/dog3.jpg", title: "Dog - 4" },
+        { url: "../img/dog4.jpg", title: "Dog - 5" },
+        { url: "../img/dog5.jpg", title: "Dog - 6" },
+        { url: "../img/dog6.jpg", title: "Dog - 7" },
+        { url: "../img/dog7.jpg", title: "Dog - 8" },
+        { url: "../img/oscar.jpg", title: "Oscar" },
+        { url: "../img/rosie.jpg", title: "Rosie" }
     ];
 
     static var index:Int = 0;

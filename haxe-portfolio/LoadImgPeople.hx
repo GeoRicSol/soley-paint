@@ -10,7 +10,8 @@ class LoadImgPeople {
     static var images = [
         { url: "../img/onTheBeach.jpg", title: "Beach Scene" },
         { url: "../img/nicOnTheBeach.jpg", title: "Nicola - Beach Scene" },
-        { url: "../img/andyOnTheBeach.jpg", title: "Andy - Beach Scene" }
+        { url: "../img/andyOnTheBeach.jpg", title: "Andy - Beach Scene" },
+        { url: "../img/family.jpg", title: "Family - Beach Scene" }
     ];
 
     static var index:Int = 0;

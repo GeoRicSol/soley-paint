@@ -1,0 +1,4 @@
+-p LoadImgJungle.hx
+-js js/LoadImgJungle.js
+-main LoadImgJungle.hx
+-lib openfl

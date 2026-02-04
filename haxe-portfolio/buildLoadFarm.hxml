@@ -1,0 +1,4 @@
+-p LoadImgFarm.hx
+-js js/LoadImgFarm.js
+-main LoadImgFarm.hx
+-lib openfl

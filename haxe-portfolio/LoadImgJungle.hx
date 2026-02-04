@@ -6,14 +6,25 @@ import js.html.DivElement;
 import js.html.KeyboardEvent;
 import js.html.Console;
 
-class LoadImgTiger {
+class LoadImgJungle {
     static var images = [
         { url: "../img/cheetah.jpg", title: "Cheetah" },
         { url: "../img/chimp.jpg", title: "Chimpanzee" },
-        { url: "../img/elephant.jpg", title: "Elephant's Stare" },
-        { url: "../img/elephant-2.jpg", title: "Elephant Running" },
-        { url: "../img/giraffe.jpg", title: "Giraffe" },
-        { url: "../img/lion.jpg", title: "Lion" },
+        { url: "../img/elephant.jpg", title: "Elephant - 1" },
+        { url: "../img/elephant-2.jpg", title: "Elephant - 2" },
+        { url: "../img/elephant-3.jpg", title: "Elephant - 3" },
+        { url: "../img/elephant-4.jpg", title: "Elephant - 4" },
+        { url: "../img/elephant5.jpg", title: "Elephant - 5" },
+        { url: "../img/elephant6.jpg", title: "Elephant - 6" },
+        { url: "../img/giraffe.jpg", title: "Giraffe - 1" },
+        { url: "../img/giraffe1.jpg", title: "Giraffe - 2" },
+        { url: "../img/leopard.jpg", title: "Leopard - 1" },
+        { url: "../img/leopard1.jpg", title: "Leopard - 2" },
+        { url: "../img/lima.jpg", title: "Lima - 1" },
+        { url: "../img/lima1.jpg", title: "Lima - 2" },
+        { url: "../img/lion.jpg", title: "Lion - 1" },
+        { url: "../img/lion1.jpg", title: "Lion - 2" },
+        { url: "../img/panda.jpg", title: "Panda - 1" },
         { url: "../img/rhino.jpg", title: "Rhino's Stare" },
         { url: "../img/rhino-2.jpg", title: "Rhino Running" },
         { url: "../img/tiger.jpg", title: "Friendly Tiger" },

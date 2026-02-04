@@ -9,7 +9,13 @@ import js.html.Console;
 class LoadImgPalette {
     static var images = [
         { url: "../img/boat.jpg", title: "Boat" },
-        { url: "../img/seascape.jpg", title: "Sea Scene" }
+        { url: "../img/seascape.jpg", title: "Sea Scene" },
+        { url: "../img/jellyfish.jpg", title: "Jelly Fish" },
+        { url: "../img/octopus.jpg", title: "Octopus" },
+        { url: "../img/otter.jpg", title: "Otter" },
+        { url: "../img/penguin.jpg", title: "Penguin" },
+        { url: "../img/tortoise.jpg", title: "Tortoise" },
+        { url: "../img/turtle.jpg", title: "Turtle" }
     ];
 
     static var index:Int = 0;

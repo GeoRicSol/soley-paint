@@ -1,4 +1,0 @@
--p LoadImgCat.hx
--js js/LoadImgCat.js
--main LoadImgCat.hx
--lib openfl

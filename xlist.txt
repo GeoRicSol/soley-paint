@@ -1,0 +1,69 @@
+Palette 1 georg 197609  377427 Feb  2 11:15 andyOnTheBeach.jpg
+                1 georg 197609  693904 Jan 25 10:03 artist.jpg
+dog     558177 Jan 24 19:01 bailey-playing.jpg
+dog     597780 Feb  2 11:27 bailey.jpg
+Palette 644076 Feb  2 11:18 boat.jpg
+                1 georg 197609  444783 Jan 24 19:04 cheetah.jpg
+                1 georg 197609  652478 Jan 24 19:05 chimp.jpg
+Farm    604543 Feb  3 17:13 cow.jpg
+Farm    657710 Feb  3 17:15 cow1.jpg
+dog     598842 Feb  3 17:16 dog.jpg
+dog     411357 Feb  3 17:16 dog1.jpg
+dog     586204 Feb  3 17:17 dog2.jpg
+dog     433524 Feb  3 17:18 dog3.jpg
+dog     314227 Feb  3 17:19 dog4.jpg
+dog     577387 Feb  3 17:21 dog5.jpg
+dog     321871 Feb  3 17:22 dog6.jpg
+dog     508331 Feb  3 17:22 dog7.jpg
+Farm    557603 Feb  3 17:23 donkey.jpg
+Farm    608908 Feb  3 17:25 donkey1.jpg
+                1 georg 197609  541142 Feb  3 17:26 donkey2.jpg
+                1 georg 197609  542644 Feb  3 17:24 donkey3.jpg
+                1 georg 197609  515277 Jan 24 19:07 elephant-2.jpg
+                1 georg 197609  353606 Feb  3 17:27 elephant-3.jpg
+                1 georg 197609  401207 Feb  3 17:28 elephant-4.jpg
+                1 georg 197609  953743 Jan 24 19:06 elephant.jpg
+                1 georg 197609  388711 Feb  3 17:29 elephant5.jpg
+                1 georg 197609  513818 Feb  3 17:30 elephant6.jpg
+                1 georg 197609  566623 Feb  3 17:30 family.jpg
+                1 georg 197609  575948 Jan 24 19:08 giraffe.jpg
+                1 georg 197609  347726 Feb  2 11:24 giraffe1.jpg
+                1 georg 197609  537483 Feb  2 11:21 horse1.jpg
+                1 georg 197609  431713 Feb  3 17:53 horse10.jpg
+                1 georg 197609  621820 Feb  3 17:53 horse11.jpg
+                1 georg 197609  344909 Feb  3 17:37 horse12.jpg
+                1 georg 197609  371814 Feb  3 17:38 horse13.jpg
+                1 georg 197609  493283 Feb  3 17:39 horse14.jpg
+                1 georg 197609  521483 Feb  2 11:22 horse2.jpg
+                1 georg 197609  580920 Feb  3 17:31 horse3.jpg
+                1 georg 197609  470383 Feb  3 17:32 horse4.jpg
+                1 georg 197609 6859274 Feb  3 17:33 horse5.jpg
+                1 georg 197609  337125 Feb  3 17:34 horse6.jpg
+                1 georg 197609  367357 Feb  3 17:34 horse7.jpg
+                1 georg 197609  354129 Feb  3 17:35 horse8.jpg
+                1 georg 197609  357886 Feb  3 17:36 horse9.jpg
+                1 georg 197609  481829 Feb  3 17:40 jellyfish.jpg
+                1 georg 197609  561184 Feb  3 17:40 leopard.jpg
+                1 georg 197609  384575 Feb  3 17:41 leopard1.jpg
+                1 georg 197609  420343 Feb  3 17:42 lima.jpg
+                1 georg 197609  501284 Feb  3 17:44 lima1.jpg
+                1 georg 197609  940157 Jan 24 19:09 lion.jpg
+                1 georg 197609  422653 Feb  3 17:45 lion1.jpg
+                1 georg 197609  312399 Feb  2 11:13 nicOnTheBeach.jpg
+Palette 419475 Feb  3 17:46 octipus.jpg
+                1 georg 197609  427346 Feb  2 11:11 onTheBeach.jpg
+dog     georg 197609  362721 Feb  2 11:29 oscar.jpg
+                1 georg 197609  533431 Feb  3 17:47 otter.jpg
+                1 georg 197609  491633 Feb  3 17:48 panda.jpg
+                1 georg 197609  377588 Feb  3 17:49 penguin.jpg
+Farm    557215 Feb  3 17:49 pig.jpg
+Farm    375991 Feb  3 17:50 pigs.jpg
+                1 georg 197609  430465 Jan 24 19:11 rhino-2.jpg
+                1 georg 197609  620547 Jan 24 19:10 rhino.jpg
+dog     260633 Feb  2 11:30 rosie.jpg
+Palette 592155 Feb  2 11:17 seascape.jpg
+                1 georg 197609  444686 Feb  1 16:56 space.jpg
+                1 georg 197609  764846 Jan 24 19:12 tiger-2.jpg
+                1 georg 197609  912775 Jan 24 19:12 tiger.jpg
+Palette 338322 Feb  3 17:51 tortoise.jpg
+Palette 433469 Feb  3 17:51 turtle.jpg
