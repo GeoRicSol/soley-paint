@@ -121,7 +121,7 @@ haxe_iterators_ArrayIterator.prototype = {
 		return this.array[this.current++];
 	}
 };
-LoadImgPeople.images = [{ url : "../img/onTheBeach.jpg", title : "Beach Scene"},{ url : "../img/nicOnTheBeach.jpg", title : "Nicola - Beach Scene"},{ url : "../img/andyOnTheBeach.jpg", title : "Andy - Beach Scene"},{ url : "../img/family.jpg", title : "Family - Beach Scene"}];
+LoadImgPeople.images = [{ url : "../img/onTheBeach.jpg", title : "Beach Scene"},{ url : "../img/nicOnTheBeach.jpg", title : "Nicola - Beach Scene"},{ url : "../img/andyOnTheBeach.jpg", title : "Andy - Beach Scene"},{ url : "../img/family.jpg", title : "Family - Beach Scene"},{ url : "../img/girl_mystery.jpg", title : "Girl - Mystery"}];
 LoadImgPeople.index = 0;
 LoadImgPeople.startX = 0;
 LoadImgPeople.endX = 0;
