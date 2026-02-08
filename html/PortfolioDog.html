@@ -2,46 +2,37 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<title>PortfolioDog</title>
+<title>Nicola's Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8" />
 
 <style>
 
 body {
-	background: rgb(255, 255, 255)  no-repeat fixed center;
-	margin: 0;
-	font-family: Arial, Helvetica, sans-serif;
+	background-image: url('../resources/backgrnd.jpg');
+	background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center; 
+	opacity: 1;
+	margin: 2%;
+	font-family: Poppins, Helvetica, sans-serif;
 	}
 
 .banner {
-	background: linear-gradient(180deg,#059ef1,#05f193f3);
-	color: #050505;
-	padding: 14px 12px;
+	padding: 12px 12px;
 	text-align: center;
-	font-size: 36px;
 	font-weight: 700;
 	letter-spacing: 0.5px;
-    opacity: 0.65;
-	box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    font-family: Garamond, serif;
+    font-family: Poppins, Helvetica, sans-serif;
+ 	font-size: 36px;
 	}
 
-
-end-of-page {
-    margin-bottom: 80px;
-}
-
-.gap {
-		margin: 3%;
-	}
-
-#title {
+#imgtitle {
 	text-align: center;
-	font-size: 40px;
-	font-family: Arial, Helvetica, sans-serif;
-	margin-top: 10px;
-	margin-bottom: 5px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+    font-family: Poppins, Helvetica, sans-serif;
+ 	font-size: 20px;
 }
 
 #artwork {
@@ -66,11 +57,12 @@ end-of-page {
 	font-size: 20px;
 	margin-left:2px;
 	margin-right:2px;
+	border-radius: 40%;
 }
 
 
 #navi{
-	background: linear-gradient(180deg,#059ef1,#05f193f3);
+	background: linear-gradient(90deg,#f8cece,#f8f2f2f3);
 	text-align: center;
 	box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 	width: 90%;
@@ -80,16 +72,20 @@ end-of-page {
 
 
 </head>
+
 <body>
 <div class="gap">
 
 <div class="banner">
-    Creative World of Soley-Harris
+    Nicola's Portfolio
 </div>
-</div><div id="navi"><button class= "btn" id="btn1">Start</button><button class= "btn" id="btn2">Prev</button><button class= "btn" id="btn3">Next</button><button class= "btn" id="btn4">End</button></div>
-<div id="title">Bailey at Play</div>
+<div id="navi"><button class= "btn" id="btn1">Start</button><button class= "btn" id="btn2">Prev</button><button class= "btn" id="btn3">Next</button><button class= "btn" id="btn4">End&#160;</button></div>
+
+<div id="imgtitle">Bailey at Play</div>
 <img id="artwork" alt="Artist" src="../img/bailey-playing.jpg">
 
 <script src="../js/LoadImgDog.js"></script>
+</div>
 </body>
+
 </html>
